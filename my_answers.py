@@ -57,7 +57,7 @@ def clean_text(text):
 
 # re library makes in easier to replace characters
     import re
-    text = re.sub(remove_chars, " ", text)
+    text = re.sub('['+remove_chars+']', " ", text)
 
 # shorten any extra dead space created above
     text = text.replace('  ',' ')
