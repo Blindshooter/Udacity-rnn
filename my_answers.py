@@ -60,7 +60,9 @@ def clean_text(text):
     text = re.sub('['+remove_chars+']', " ", text)
 
 # shorten any extra dead space created above
-    text = text.replace('  ',' ')
+    text_final = text.replace('  ',' ')
+    
+    return text_final
 
 ### TODO: fill out the function below that transforms the input text and window-size into a set of input/output pairs for use with our RNN model
 def window_transform_text(text,window_size,step_size):
